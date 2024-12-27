@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tributes - In Memory of Bishop Dr. Felix A.O Onomeregbor</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="https://cdn.prod.website-files.com/67041c2a6a806901e0c7ed1b/css/elysian-tennis.webflow.1919b59b5.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div
+        class="account-banner"
+        style="
+          background-color: #1a1a1a;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+          position: relative;
+          z-index: 1001;
+        "
+      >
+        <div class="container-large">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+            "
+          >
+            <div class="account-details-container">
+              <div
+                class="account-details-scroll"
+                style="display: flex; align-items: center; gap: 20px"
+              >
+                <a
+                  href="#"
+                  class="button w-inline-block"
+                  style="
+                    text-decoration: none;
+                    min-width: 200px;
+                    white-space: nowrap;
+                  "
+                >
+                  <p style="margin: 0">Home</p>
+                </a>
+                <a
+                  href="#"
+                  class="button"
+                  onclick="openModal()"
+                  style="
+                    text-decoration: none;
+                    min-width: 200px;
+                    white-space: nowrap;
+                  "
+                >
+                  <p style="margin: 0">Support</p>
+                </a>
+
+                <!-- Modal -->
+                <div id="supportModal" class="modal">
+                  <div class="modal-content">
+                    <h2 style="color: #1a1a1a !important">Support</h2>
+                    <p
+                      style="
+                        color: #1a1a1a;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      We are grateful for your kindness. Below are the account
+                      details:
+                    </p>
+                    <div class="account-details">
+                      <p><strong>Account Number:</strong> 2252321584</p>
+                      <p><strong>Bank:</strong> Zenith Bank</p>
+                      <p>
+                        <strong>Account Name:</strong> Onomeregbor Princess
+                        Elohor
+                      </p>
+                    </div>
+                    <button class="close-btn" onclick="closeModal()">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main class="main-wrapper">
+        <section class="section background-color-black">
+          <div class="container-large">
+            <div
+              class="max-width-700"
+              style="margin: 0 auto; text-align: center"
+            >
+              <h1 class="heading-style-h1">Share Your Tribute</h1>
+              <p class="text-size-medium text-color-lightgrey">
+                Honor the memory of Bishop Dr. Felix A.O Onomeregbor by sharing
+                your thoughts and memories.
+              </p>
+            </div>
+
+            <!-- Tribute Form -->
+            <!-- Tribute Form -->
+            <div class="tribute-form">
+              <form id="tribute-form">
+                <input
+                  type="text"
+                  class="tribute-input"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  type="text"
+                  class="tribute-input"
+                  placeholder="Title (e.g. Friend, Church Member)"
+                  required
+                />
+                <textarea
+                  class="tribute-input tribute-textarea"
+                  placeholder="Share your memories and condolences..."
+                  required
+                ></textarea>
+                <input
+                  type="file"
+                  class="tribute-input tribute-file"
+                  accept="image/*"
+                  style="display: none"
+                  id="image-upload"
+                />
+                <div class="image-upload-container">
+                  <button
+                    type="button"
+                    class="button-secondary w-inline-block"
+                    onclick="document.getElementById('image-upload').click()"
+                  >
+                    <p>Upload Profile Image (Optional)</p>
+                  </button>
+                  <div
+                    class="image-preview"
+                    style="display: none; margin-top: 12px"
+                  >
+                    <img
+                      id="preview-image"
+                      style="max-width: 100px; border-radius: 50%"
+                    />
+                    <button
+                      type="button"
+                      class="remove-image"
+                      onclick="removeImage()"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+                <!-- Added missing submit button -->
+                <button
+                  type="submit"
+                  class="button w-inline-block submit-button"
+                >
+                  <div class="loader"></div>
+                  <p>Submit Tribute</p>
+                </button>
+              </form>
+            </div>
+
+            <!-- Tributes List -->
+            <div class="tributes-list">
+              <h2 class="heading-style-h2" style="margin-bottom: 40px">
+                Recent Tributes
+              </h2>
+              <!-- Skeleton loader will be added here by JavaScript -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom Account Banner -->
+      <div
+        class="account-banner"
+        style="
+          background-color: #1a1a1a;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        "
+      ></div>
+    </div>
+
+    <script>
+      function openModal() {
+        document.getElementById("supportModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("supportModal").style.display = "none";
+      }
+    </script>
+    <!-- Firebase SDK -->
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
